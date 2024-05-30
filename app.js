@@ -6,7 +6,11 @@ app.use(express.static("public"));
 
 app.listen()
 
-app.get('/inicio', main);
+app.get("/inicio", (req, res) => {
+    res.send("Esta es la página de inicio");
+});
+
+//app.get("/inicio", main)
 
 app.get("/", (req, res) => { 
     //res.redirect('/inicio');

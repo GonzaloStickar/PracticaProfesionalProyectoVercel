@@ -1,4 +1,4 @@
-const { request, response} = require('express');
+const { request, response } = require('express');
 require('dotenv').config();
 const fs = require('fs');
 
