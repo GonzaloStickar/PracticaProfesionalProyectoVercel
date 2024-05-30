@@ -4,7 +4,8 @@ const { main } = require('./api/main');
 
 // A simple get greet method 
 app.get("/", (req, res) => { 
-    res.redirect('/inicio');
+    //res.redirect('/inicio');
+    res.send({"hola":"hola"})
 });
 
 //app.get('/inicio', main);
