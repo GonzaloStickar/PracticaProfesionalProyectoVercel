@@ -5,7 +5,7 @@ const app = express();
 app.get("/", (req, res) => { 
     // get the passed query 
     const { name } = req.query; 
-    res.send({ msg: `Welcome ${name}!` }); 
+    res.send({ msg: `hola como andas ${name}!` }); 
 }); 
 
 // export the app for vercel serverless functions 
