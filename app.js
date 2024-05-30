@@ -3,7 +3,7 @@ const app = express();
 const { main } = require('./api/main');
 
 app.use(express.static("public"));
-
+app.use(express.urlencoded({ extended: true })); // Necesario para recibir datos de formularios (Middleware)
 app.listen()
 
 //app.get("/inicio", (req, res) => {
