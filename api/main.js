@@ -1,11 +1,18 @@
-const { request, response } = require('express');
-require('dotenv').config();
 const fs = require('fs');
 
-const main = (req = request, res = response) => {
-    const paginaPrincipal = fs.readFileSync('./public/templates/index.html', 'utf8');
-    res.status(200).send(paginaPrincipal);
-}
+const main = (req, res) => {
+    // Ruta al archivo index.html (directamente)
+    const indexPath = './public/templates/index.html';
+
+    fs.readFile(indexPath, 'utf8', (err, data) => {
+        if (err) {
+            console.error('Error al leer el archivo:', err);
+            res.status(500).send('Error interno del servidor');
+        } else {
+            res.status(200).send(data);
+        }
+    });
+};
 
 module.exports = {
     main
