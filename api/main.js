@@ -4,6 +4,7 @@ const main = (req, res) => {
 
     // Obligatorio usar 'process.cdw()' si usamos Vercel
     const indexPath = path.join(process.cwd(), 'public', 'templates', 'index.html');
+    console.log(indexPath)
 
     res.sendFile(indexPath, (err) => {
         if (err) {
