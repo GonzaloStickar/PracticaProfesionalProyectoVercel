@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 //const { sql } = require('@vercel/postgres');
 
-const { main } = require('./api/main');
+const { main } = require('../api/main');
 
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
