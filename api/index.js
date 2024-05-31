@@ -10,7 +10,7 @@ const { main } = require('./main');
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public', 'img')));
 
 app.get("/inicio", main)
 

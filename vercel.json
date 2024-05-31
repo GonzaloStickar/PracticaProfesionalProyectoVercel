@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "public":true,
     "rewrites": [
       { "source": "/(.*)", "destination": "/api" }
     ],
@@ -7,6 +8,10 @@
       {
         "src": "api/index.js",
         "use": "@vercel/node"
+      },
+      {
+        "src": "public/**",
+        "use": "@vercel/static"
       }
     ]
   }
