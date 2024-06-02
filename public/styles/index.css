@@ -1,22 +1,31 @@
 * {
-        margin:0;
-    font-family: 'Roboto', sans-serif;
+    margin:0;
+    font-family: 'Segoe UI';
 }
 
 body {
+    background-color: antiquewhite;
+    /*
     background: rgb(238,174,202);
     background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    */
 }
 
 /*header*/
+.texto_sobre_img {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
 .navbar {
     position: absolute;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
     color: white;
-    padding-top: 10px;
+    padding-top: 25px;
     padding-bottom: 10px;
+    z-index: 1;
 }
 
 .navbar ul {
@@ -35,14 +44,17 @@ body {
     text-decoration: none;
 }
 
-.texto_sobre_img {
+.img_header {
     width: 100%;
-    position: relative;
-    display: inline-block;
 }
 
-.texto_sobre_img img {
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background: rgba(36, 36, 36, 0.8);
 }
 
 .texto_centrado {
@@ -51,16 +63,15 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+    z-index: 1;
 }
 
 .texto_centrado h2 {
     font-size: 64;
-    text-shadow: 1px 1px 2px black;
 }
 
 .texto_centrado p {
     font-size: 32;
-    text-shadow: 0.5px 0.5px 1px black;
 }
 
 /*main*/
@@ -74,6 +85,7 @@ body {
 .titulo_seccion {
     text-align: center;
     margin-bottom: 20px;
+    padding-top: 50px;
 }
 
 .titulo_seccion h2 {
@@ -124,18 +136,20 @@ body {
 /*contenedor_consulta_reparacion y contenedor_info_contacto*/
 .contenedor_consulta_reparacion, .contenedor_info_contacto {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 50px;
 }
 
 .contenedor_consulta_reparacion aside,
-.contenedor_consulta_reparacion article,
-.contenedor_info_contacto aside,
-.contenedor_info_contacto article {
-    flex: 0 0 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: flex-start; /* Alinea el contenido a la izquierda */
-    box-sizing: border-box;
+.contenedor_consulta_reparacion article {
+    width: 45%;
+}
+
+.contenedor_consulta_reparacion aside img, .contenedor_info_contacto aside img {
+    width:500px;
+    height:400px;
+    border-radius: 15px;
 }
 
 .contenedor_consulta_reparacion article, 
@@ -143,15 +157,14 @@ body {
     padding-left: 75px;
 }
 
-.contenedor_consulta_reparacion img,
-.contenedor_info_contacto img {
-    width: 100%;
-    height: auto;
+/*contenedor_consulta_reparacion*/
+.contenedor_consulta_reparacion p {
+    margin-top:15px;
+    margin-bottom: 15px;
 }
 
-/*contenedor_consulta_reparacion*/
-.contenedor_consulta_reparacion p, .contenedor_consulta_reparacion h2 {
-    margin-bottom: 15px;
+.contenedor_consulta_reparacion aside {
+    padding-left: 10px;
 }
 
 .contenedor_consulta_reparacion article {
@@ -178,10 +191,12 @@ body {
 }
 
 /*contenedor_info_contacto*/
-.contenedor_info_contacto h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+.contenedor_info_contacto {
+    padding-bottom: 50px;
+}
+
+.contenedor_info_contacto aside {
+    padding-right: 10px;
 }
 
 .contenedor_info_contacto h3 {
