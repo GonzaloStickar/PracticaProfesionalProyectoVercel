@@ -3,22 +3,28 @@
     <title>Practica Profesional</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../public/styles/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   </head>
   <body>
     <header>
       <div class="texto_sobre_img">
 
-        <nav class="navbar">
+        <nav class="navbar" id="inicio">
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Sobre nosotros</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Iniciar Sesión</a></li>
+            <li>
+              <a href="#inicio" title="Ir al inicio">
+                <span class="material-symbols-outlined">home</span>
+                <span class="texto_inicio">Inicio</span>
+              </a>
+            </li>
+            <li><a href="#sobre_nosotros" title="Saber más sobre nosotros">Sobre nosotros</a></li>
+            <li><a href="#contacto_reparacion" title="Hacer una consulta">Consulta</a></li>
+            <li class="iniciar-sesion"><a href="/usuario" title="Iniciar sesión">Iniciar Sesión</a></li>
           </ul>
         </nav>
 
         <div>
-          <img src="../public/img/index_header.jpg"  class="img_header">
+          <img src="../public/img/index_header.jpg" class="img_header">
           <div class="overlay"></div>
           <div class="texto_centrado">
             <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eum!</h2>
@@ -72,7 +78,7 @@
         </div>
       </div>
 
-      <div class="contenedor_consulta_reparacion">
+      <div class="contenedor_consulta_reparacion" id="contacto_reparacion">
         <aside>
           <img src="../public/img/index_main_contenedor_consulta_reparacion.jpg">
         </aside>
@@ -89,9 +95,9 @@
         </article>
       </div>
       
-      <div class="contenedor_info_contacto">
+      <div class="contenedor_info_contacto"  id="sobre_nosotros">
         <article>
-          <h2>Fotos de las reparaciones</h2>
+          <h2>Sobre nosotros</h2>
           <h3>Lorem</h3>
           <p>Lorem ipsum dolor sit.</p>
           <p>Lorem ipsum dolor sit.</p>
