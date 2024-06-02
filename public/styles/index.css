@@ -127,7 +127,7 @@ body {
 }
 
 /* Media query para pantallas más pequeñas */
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
     .galeria_figure_figcaption article {
         width: 100%;
     }
