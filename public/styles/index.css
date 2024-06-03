@@ -141,14 +141,31 @@ body {
     color: #555;
 }
 
-/* Media query para pantallas más pequeñas */
 @media (max-width: 1000px) {
+    .texto_centrado h2 {
+        font-size:48;
+    }
+    
+    .texto_centrado p {
+        font-size: 24;
+    }
+
     .galeria_figure_figcaption article {
         width: 100%;
     }
 
     .contenedor_consulta_reparacion {
         flex-direction: column;
+    }
+
+    .contenedor_consulta_reparacion article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contenedor_consulta_reparacion article form input[type="number"] {
+        width: 60%;
     }
 
     .contenedor_info_contacto {
@@ -169,7 +186,67 @@ body {
 }
 
 @media (max-width: 850px) {
-    /*header*/
+    .navbar {
+        background-color: rgba(0,0,0,0.33);
+        padding-bottom: 0;
+        padding-top: 15px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar li, .navbar .iniciar_sesion {
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .navbar li {
+        margin-bottom: 15px;
+    }
+
+    .texto_centrado {
+        transform: translate(-50%, -25%);
+    }
+    
+    .texto_centrado h2 {
+        font-size: 32;
+    }
+    
+    .texto_centrado p {
+        font-size: 16;
+    }
+}
+
+@media (max-width: 650px) {
+    .texto_header {
+        font-size: 16;
+    }
+
+    .texto_centrado {
+        transform: translate(-50%, -10%);
+    }
+    
+    .texto_centrado h2 {
+        font-size:16;
+    }
+    
+    .texto_centrado p {
+        font-size: 8;
+    }
+}
+
+@media (max-width: 550px) {
+    .texto_header {
+        font-size: 12;
+        top:-7px;
+    }
+}
+
+@media (max-width: 520px) {
+    .texto_centrado {
+        transform: translate(-50%, 20%);
+    }
 }
 
 /*contenedor_consulta_reparacion y contenedor_info_contacto*/
@@ -212,23 +289,39 @@ body {
     flex: 2;
 }
 
-.contenedor_consulta_reparacion button {
+article form button {
     background-color: #007BFF;
     color: white;
     border: none;
-    padding: 10px 10px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.contenedor_consulta_reparacion button:hover {
+article form button:hover {
     background-color: #0056b3;
 }
 
-.contenedor_consulta_reparacion button:active {
+article form button:active {
     background-color: #004080;
+    transform: scale(0.98);
+}
+
+article form input[type="number"] {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+article form input[type="number"]:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 /*contenedor_info_contacto*/
