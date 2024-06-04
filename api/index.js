@@ -13,7 +13,7 @@ const app = express();
 
 app.use(express.json());
 
-app.use(express.cookieParser(process.env.SESSION_SECRET));
+app.use(cookieParser(process.env.SESSION_SECRET))
 app.use(express.cookieSession());
 //app.use(session({
 //    secret: process.env.SESSION_SECRET,
