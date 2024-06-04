@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const session = require('express-session');
-//const cookieParser = require('cookie-parser');
+const cookieParser = require('cookie-parser');
 //const { sql } = require('@vercel/postgres');
 const path = require('path');
 
@@ -13,14 +13,16 @@ const app = express();
 
 app.use(express.json());
 
-app.use(session({
-    secret: process.env.secret,
-    resave: false,
-    saveUninitialized: true,
-}));
+app.use(express.cookieParser(process.env.SESSION_SECRET));
+app.use(express.cookieSession());
+//app.use(session({
+//    secret: process.env.SESSION_SECRET,
+//    resave: false,
+//    saveUninitialized: true,
+//}));
 
 app.use(express.static(path.join(__dirname, 'public', 'img')));
-//app.use(cookieParser());
+
 
 app.use((req, res, next) => {
     console.log(`${req.method}`);
