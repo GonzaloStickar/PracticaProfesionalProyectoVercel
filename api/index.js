@@ -13,8 +13,17 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cookieParser(process.env.SESSION_SECRET))
-app.use(express.cookieSession());
+//app.use(express.cookieParser(process.env.SESSION_SECRET))
+//app.use(express.cookieSession());
+
+app.set('trust proxy', 1) // trust first proxy
+app.use(session({
+  secret: 'keyboard cat',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { secure: true }
+}))
+
 //app.use(session({
 //    secret: process.env.SESSION_SECRET,
 //    resave: false,
