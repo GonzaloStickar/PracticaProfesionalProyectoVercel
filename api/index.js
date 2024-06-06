@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public', 'img')));
 app.use((req, res, next) => {
     console.log(`${req.method}`);
     next();
-})
+}) 
 
 
 
