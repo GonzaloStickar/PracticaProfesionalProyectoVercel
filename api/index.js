@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 //const { sql } = require('@vercel/postgres');
 const path = require('path');
 
-const { main } = require('./main');
+const { main } = require('./main.js');
 const { loginUser } = require('./loginUser.js')
 
 const app = express();
@@ -72,14 +72,8 @@ app.get("/todosLoginTrucho", validateCookie, (req, res) => {
 app.post("/login", async (req, res) => {
     try {
         const { username, password } = req.body;
-        console.log(req.body);
-        const dataUser = {
-            username,
-            password,
-        };
         return res.status(200).json({
-            msg: "Ok",
-            dataUser,
+            msg: "Ok"
         });
     } catch (error) {
         return res.status(500).json({
