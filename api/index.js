@@ -73,7 +73,7 @@ app.post("/login", async (req, res) => {
     try {
         const { username, password } = req.body;
         return res.status(200).json({
-            msg: "Ok"
+            msg: "Ok."
         });
     } catch (error) {
         return res.status(500).json({
